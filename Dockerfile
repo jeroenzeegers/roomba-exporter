@@ -1,4 +1,4 @@
-FROM arm/node:10
+FROM node:10
 
 WORKDIR /opt/roomba-exporter
 
