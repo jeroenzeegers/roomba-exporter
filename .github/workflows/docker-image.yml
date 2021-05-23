@@ -16,3 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag jeroenzeegerstwill/roomba-exporter:$(date +%s)
+    - name: push
+      run: docker push -t jeroenzeegerstwill/roomba-exporter:latest
+
