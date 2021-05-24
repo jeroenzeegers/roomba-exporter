@@ -27,6 +27,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: build
-      run: docker build . -t jeroenzeegerstwill/roomba-exporter:latest
+      run: docker build . --platform linux/arm/v7 -t jeroenzeegerstwill/roomba-exporter:latest
     - name: push
       run: docker push jeroenzeegerstwill/roomba-exporter:latest
